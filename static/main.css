@@ -1,0 +1,35 @@
+/*# \myclub_site\static\main.css*/
+
+@charset "utf-8";
+#header {
+    border-style: none;
+    width: 800px;
+    height: auto;
+}
+
+#wrapper {
+    margin-top: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #FFFFFF;
+    width: 300px;
+}
+
+
+h1 {
+    color: #270c39;
+}
+
+
+
+#nav li a {
+    text-decoration: none;
+}
+
+
+
+
+
+th.month {
+    display: none;
+}
