@@ -17,15 +17,23 @@ class Contact(models.Model):
     eemail = models.EmailField(null=False)
     econtact = models.CharField(max_length=30)
     Add_field = models.IntegerField(default=-9, blank=True)
-    list2 = Test1.objects.all()
-    CHOICES = []
-    print(list2)
-    for i in list2:
-        print(i.id)
-        CHOICES[i.id] = i.name;
+    # list2 = Test1.objects.all()
+    # CHOICES = []
+    # print(list2)
+    # for i in list2:
+    #     # print(i.id)
+    #     CHOICES[i.id] = i.name;
 
-    CHOICES = [('1', 'First'), ('2', 'Second')]
-    choice_field = models.CharField(max_length=1,  choices=CHOICES)
+    # CHOICES = [('1', 'First'), ('2', 'Second')]
+    # choice_field = models.CharField(max_length=1,  choices=CHOICES)
+    choice_field = models.ForeignKey(Test1, on_delete=models.CASCADE)
+    dependencies = [
+        ('Test1', '0123_the_previous_migration'),
+    ]
 
     # class Meta:
     #     db_table = "contact_info"
+
+    # class Meta:
+    #     db_table = "contact_info"
+
